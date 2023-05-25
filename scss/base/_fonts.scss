@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as v;
+
+
+// ApercuPro
+@font-face {
+    font-family: 'ApercuPro';
+    src : url('#{v.$fontPath}/ApercuPro/ApercuPro-Regular.woff') format('woff');
+    src : url('#{v.$fontPath}/ApercuPro/ApercuPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ApercuPro';
+    src : url('#{v.$fontPath}/ApercuPro/ApercuPro-Medium.woff') format('woff');
+    src : url('#{v.$fontPath}/ApercuPro/ApercuPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ApercuPro';
+    src : url('#{v.$fontPath}/ApercuPro/ApercuPro-Bold.woff') format('woff');
+    src : url('#{v.$fontPath}/ApercuPro/ApercuPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ApercuPro';
+    src : url('#{v.$fontPath}/ApercuPro/ApercuPro-Black.woff') format('woff');
+    src : url('#{v.$fontPath}/ApercuPro/ApercuPro-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

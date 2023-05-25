@@ -1,0 +1,317 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/placeholders.scss';
+
+.#{v.$brand} {
+    &_form {
+        fieldset {
+            border: none;
+        }
+        legend {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        label {
+            // color: v.$white;
+            letter-spacing: 0.03em;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+        input,
+        select {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            // border-bottom: .2rem solid v.$gold;
+            // margin: 0rem 0 2.5rem;
+            margin: 0rem 0 3.5rem;
+            outline: none;
+            // color: v.$white;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            letter-spacing: 0.05rem;
+            &.valid {
+                // border-bottom: .2rem solid v.$greenSuccess;
+            }
+            &.error {
+                border: none;
+                // border-bottom: .2rem solid v.$gold;
+                &:focus,
+                &:focus-visible,
+                &:focus-within {
+                    border: none;
+                    // border-bottom: .2rem solid v.$gold;
+                }
+            }
+            &::placeholder {
+                // color: v.$white;
+            }
+        }
+        /* Change autocomplete styles in WebKit */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            border: none;
+            // -webkit-text-fill-color: v.$white;
+            -webkit-box-shadow: 0 0 0px 1000px #7e080ef0 inset;
+            // transition: background-color 5000s ease-in-out 0s;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+        }
+        input[type=number] { -moz-appearance:textfield; }
+
+        input {
+            padding: 2rem 1.5rem 2rem 5rem;
+            background-size: 3.2rem 3.2rem;
+            background-position: 1rem 50%;
+            background-repeat: no-repeat;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            &.valid,
+            &.error {
+                background-position: 1rem 50%, 97% 50%;
+            }
+            &[type="submit"] {
+                margin: 0 auto;
+                // @include m.btn('dorado', 'full');
+                &.disabled {
+                    pointer-events: none;
+                    // background: v.$grayDisabled;
+                }
+            }
+            &#edit-email,
+            &.form-email {
+                background-image: url('../assets/icons/icon-msg.svg');
+                &.valid {
+                    background-image: url('../assets/icons/icon-msg.svg'), url('../assets/icons/icon-check.svg');
+                }
+                &.error {
+                    background-image: url('../assets/icons/icon-msg.svg'), url('../assets/icons/icon-alert.svg');
+                }
+            }
+            &#edit-pass,
+            &#edit-pass--2,
+            &#edit-confirm-pass {
+                background-image: url('../assets/icons/icon-lock.svg');
+                // &.error {
+                //     background-image: url('../assets/icons/icon-lock.svg'), url('../assets/icons/icon-alert.svg');
+                // }
+            }
+            &#edit-name,
+            &#edit-lastname {
+                background-image: url('../assets/icons/icon-user.svg');
+                &.valid {
+                    background-image: url('../assets/icons/icon-user.svg'), url('../assets/icons/icon-check.svg');
+                }
+                &.error {
+                    background-image: url('../assets/icons/icon-user.svg'), url('../assets/icons/icon-alert.svg');
+                }
+            }
+            &#edit-gender {
+                background-image: url('../assets/icons/icon-group.svg');
+                &.valid {
+                    background-image: url('../assets/icons/icon-group.svg'), url('../assets/icons/icon-check.svg');
+                }
+                &.error {
+                    background-image: url('../assets/icons/icon-group.svg'), url('../assets/icons/icon-alert.svg');
+                }
+            }
+            &#edit-indentity {
+                background-image: url('../assets/icons/icon-note.svg');
+                &.valid {
+                    background-image: url('../assets/icons/icon-note.svg'), url('../assets/icons/icon-check.svg');
+                }
+                &.error {
+                    background-image: url('../assets/icons/icon-note.svg'), url('../assets/icons/icon-alert.svg');
+                }
+            }
+            &#edit-phone {
+                background-image: url('../assets/icons/icon-flag-pa-phone.svg');
+                padding: 2rem 1.5rem 2rem 10rem;
+                background-size: 7rem 3.2rem;
+                &.valid {
+                    background-image: url('../assets/icons/icon-flag-pa-phone.svg'), url('../assets/icons/icon-check.svg');
+                    background-size: 7rem 3.2rem, 3.2rem 3.2rem;
+                }
+                &.error {
+                    background-image: url('../assets/icons/icon-flag-pa-phone.svg'), url('../assets/icons/icon-alert.svg');
+                    background-size: 7rem 3.2rem, 3.2rem 3.2rem;
+                }
+            }
+
+        }
+        select {
+            padding: 2rem 1.5rem 2rem 1.5rem;
+            appearance: none;
+            background-image: url('../assets/icons/icon_arrow_white_down.svg');
+            background-size: 2rem 2rem;
+            background-position: 95% 50%;
+            background-repeat: no-repeat;
+            &:focus {
+                // background-color: v.$redBrand;
+            }
+            &.valid {
+                background-image: url('../assets/icons/icon_arrow_green_down.svg');
+            }
+            &#edit-gender {
+                padding: 2rem 1.5rem 2rem 5rem;
+                background-image: url('../assets/icons/icon-group.svg'), url('../assets/icons/icon_arrow_white_down.svg');
+                background-size: 3.2rem 3.2rem, 2rem 2rem;
+                background-position: 1rem 50%, 95% 50%;
+                &.valid {
+                    background-image: url('../assets/icons/icon-group.svg'), url('../assets/icons/icon_arrow_green_down.svg');
+                }
+            }
+            &:not([class*="textSuccess"]) {
+                // font-family: v.$inter;
+                font-weight: 400;
+            }
+        }
+        .js-form-item {
+            margin: 0;
+            label {
+                &.error {
+                    display: none !important;
+                }
+            }
+        }
+        //mensaje de error
+        .errorParent,
+        .boxerror-input {
+            position: relative;
+            .error {
+                border: none;
+                // border-bottom: .2rem solid v.$gold;
+                &:focus,
+                &:focus-visible,
+                &:focus-within {
+                    border: none;
+                    // border-bottom: .2rem solid v.$gold;
+                }
+            }
+            label {
+                &.error {
+                    display: none !important;
+                }
+            }
+            .error-message,
+            .error-input {
+                position: absolute;
+                // bottom: .9rem;
+                // top: calc(100% - 2.3rem);
+                top: calc(100% - 3.4rem);
+                left: 1.5rem;
+                font-size: 1.2rem;
+                // color: v.$white;
+            }
+
+        }
+        .containerDate {
+            &__body {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 1rem;
+                select {
+                    text-align: center;
+                }
+                .disabled {
+                    pointer-events: none;
+                    opacity: .5;
+                }
+                &.errorParent {
+                    .error-message {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+        .containerTerms {
+            .js-form-item {
+                // padding: 2.5rem 0 2.5rem 0;
+            }
+            input {
+                display: none;
+                &:checked ~ label {
+                    &::before {
+                        background-image: url('../assets/icons/icon-check-red.svg');
+                    }
+                }
+            }
+            label {
+                padding: 2.5rem 0;
+                display: grid;
+                grid-template-columns: 3.2rem auto;
+                gap: 3rem;
+                // font-size: 1.4rem;
+                font-size: 0;
+                line-height: 1.7rem;
+                letter-spacing: 0.03em;
+                p {
+                    line-height: 1.7rem;
+                    .sizeFont-14To16 {
+                        line-height: 1.7rem;
+                    }
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    border-radius: .4rem;
+                    // background-color: v.$white;
+                    background-position: center center;
+                    background-size: 70%;
+                    background-repeat: no-repeat;
+                }
+            }
+            .errorParent {
+                .error-message {
+                    top: calc(100% - 2.5rem);
+                    // color: v.$gold;
+                    // left: 4.1rem;
+                    left: 6.1rem;
+                }
+            }
+            .js-form-item-marketing {
+                label {
+                    align-items: center;
+                }
+            }
+        }
+        .containerPassword {
+            position: relative;
+            &__eye {
+                z-index: 5;
+                position: absolute;
+                bottom: 5rem;
+                right: 1.5rem;
+                width: 3.2rem;
+                height: 3.2rem;
+                background-image: url('../assets/icons/icon-eye-off.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                &.eyeOff {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    background-image: url('../assets/icons/icon-eye.svg');
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

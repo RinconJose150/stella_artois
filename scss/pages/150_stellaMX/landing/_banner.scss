@@ -1,0 +1,56 @@
+@use '../../../abstracts/variables' as v;
+@use '../../../abstracts/mixins' as m;
+@use '../../../base/functions' as f;
+@use '../../../abstracts/placeholders.scss';
+
+.#{v.$brand} {
+    &_banner {
+        @extend %bgImage;
+        padding: 10rem 0 7rem;
+        min-height: 100vh;
+        &__body {
+            max-width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            color: f.color(grayscale,white);
+        }
+        h1 {
+            font-size: f.toRem(16);
+            letter-spacing: 0.48em;
+            text-transform: uppercase;
+        }
+        h2 {
+            display: grid;
+            text-align: center;
+            font-size: f.toRem(50);
+            line-height: 6rem;
+            letter-spacing: -0.02em;
+            span.big {
+                font-size: f.toRem(85);
+                line-height: 8.5rem;
+            }
+        }
+        p {
+            font-size: f.toRem(18);
+            font-family: v.$apercuPro;
+            font-weight: 500;
+            line-height: 2.6rem;
+            text-align: center;
+            letter-spacing: 0.03em;
+        }
+        .SAbtnWhatsapp {
+            &.float {
+                border-radius: 0 0 .8rem .8rem;
+                transform: rotate(270deg);
+                width: 100%;
+                max-width: 13.5rem;
+                position: fixed;
+                top: 8rem;
+                left: -5rem;
+            }
+        }
+    }
+}

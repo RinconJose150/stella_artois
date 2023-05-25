@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as v;
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    border: 0;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: v.$apercuPro;
+}
+
+fieldset,
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+blockquote,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p {
+    margin: 0;
+    line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.containerLimit {
+    width: 90%;
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+// .disabledBtn {
+//     pointer-events: none !important;
+//     background: v.$grayDisabled !important;
+//     color: v.$white !important;
+// }

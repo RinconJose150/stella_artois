@@ -1,0 +1,16 @@
+// Base
+@use 'base';
+
+// Components
+@use 'components';
+
+// Layout
+@use 'layout';
+
+// Vendors
+@use 'vendors/150' as *;
+
+
+// * Compila los archivos SCSS y general el CSS
+// * Se debe ubicar en la carpeta dist y ejecutar el comando
+// sass --watch --style=compressed scss/main.scss:css/main.css

@@ -1,0 +1,70 @@
+// ==========================================================================
+// FontStack
+// ==========================================================================
+$font-size: 1rem;
+$referFont: 10;
+$apercuPro: "ApercuPro", sans-serif;
+$artois_sebas: "ApercuPro", sans-serif;
+
+// ==========================================================================
+// Paths and Brand
+// ==========================================================================
+$fontPath: '../fonts';
+$imagePath: '../img';
+$brand: 'SA';
+
+// ==========================================================================
+// COLORS : Eje.: background: color( primary, light );
+// ==========================================================================
+
+$colors: (
+   primary: (
+      red         : #D50032,
+      green       : #10911F,
+   ),
+   bg: (
+      pink        : #FBE5EB,
+   ),
+   complementary: (
+      underline   : #A39665,
+   ),
+   grayscale: (
+      white       : #ffffff,
+      gray-1      : #f2f2f2, 
+      gray-2      : #eeeeee,
+      gray-3      : #cccccc, 
+      gray-4      : #999999, 
+      gray-5      : #666666,
+      gray-6      : #333333,
+      gray-7      : #4A4A4A, 
+      gray-8      : #F1F0F2, 
+      base        : #1b1b1b,
+      black       : #000000
+   ),
+);
+
+// ==========================================================================
+// MEDIAQUERIES
+// ==========================================================================
+$mediaqueries: (
+	hover: 			"(hover: hover)",
+	ie: 			"screen and (-ms-high-contrast: active), (-ms-high-contrast: none)",
+	safari: 		"screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)",
+	safari2: 		"not all and (min-resolution:.001dpcm)",
+	landscape:		"(orientation: landscape)",
+	portrait:		"(orientation: portrait)",
+	mobS3: 			360,
+	mobS2: 			480,
+	mobS: 			640,
+	mob: 			767,
+	tabS: 			820,
+	tab: 			991,
+	lapS3: 			1024,
+	lapS2: 			1199,
+	lapS: 			1280,
+	lap: 			1367,
+	deskS: 			1440,
+	desk: 			1560,
+	deskB: 			1600
+);
+

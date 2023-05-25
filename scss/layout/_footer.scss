@@ -1,0 +1,374 @@
+// @use '../abstracts/variables' as v;
+// @use '../abstracts/mixins' as m;
+
+// footer,
+// .region {
+//     #block-abilegaltext {
+//         // font-family: v.$Poppins;
+//         font-size: 1rem;
+//         font-weight: 400;
+//         @include m.mq(tab, min) {
+//             font-size: 1.4rem;
+//         }
+//         .legal_accordion {
+//             font-size: inherit;
+//             text-transform: initial;
+//         }
+//         .legal_panel {
+//             font-size: inherit;
+//             padding: 1rem;
+//             // p {
+//             //     color: v.$white;
+//             // }
+//         }
+//     }
+//     #footer__paco {
+//         // font-family: v.$Inter;
+//         .footer__paco--disclaimer-up {
+//             padding: 0;
+//             p {
+//                 // font-family: v.$Poppins;
+//                 color: v.$white;
+//                 font-weight: 400;
+//                 text-transform: initial;
+//                 padding: 2rem 0;
+//                 font-size: 1rem;
+//                 @include m.mq(tab,min) {
+//                     font-size: 1.4rem;
+//                 }
+//                 strong {
+//                     font-weight: 700;
+//                     // color: v.$yellow;
+//                     &:hover {
+//                         cursor: pointer;
+//                     }
+//                 }
+//             }
+//             .disclaimer-description {
+//                 background-color: rgb(204, 204, 204) !important;
+//                 p {
+//                     color: v.$black;
+//                     text-align: left;
+//                     font-weight: 400;
+//                     padding: 1.6rem;
+//                     letter-spacing: 0.03em;
+//                 }
+//             }
+//         }
+//         .paco__main {
+//             // background-color: v.$blue !important;
+//             &--wrapper {
+//                 @include m.mq(tab,min) {
+//                     gap: 0;
+//                 }
+//                 @include m.mq(tab, min) {
+//                     gap: 0;
+//                     width: 100%;
+//                     max-width: none;
+//                     padding: 0 5%;
+//                 }
+//             }
+//             .paco__main--subscription {
+//                 &-brand-logo {
+//                     width: 12.4rem;
+//                     height: 3.8rem;
+//                     margin-bottom: 0;
+//                     img {
+//                         width: 100%;
+//                         height: 100%;
+//                         object-fit: contain;
+//                     }
+//                 }
+//                 .paco__main--description {
+//                     display: grid;
+//                     letter-spacing: 0.03em;
+//                     font-size: 1.4rem;
+//                     font-weight: 400;
+//                     margin: 2rem 0;
+//                     @include m.mq(tab,min) {
+//                         font-size: 1.6rem;
+//                     }
+//                     p {
+//                         // font-size: 0;
+//                         line-height: 1;
+//                     }
+//                     span {
+//                         // font-size: inherit;
+//                         font-weight: inherit;
+//                         // letter-spacing: 0.03em;
+//                     }
+//                 }
+//                 .paco__subscribe-form-container {
+//                     .ab-paco-subscribe-form {
+//                         .js-form-item {
+//                             .subscribe-email {
+//                                 padding: 1.3rem 1rem;
+//                                 &::placeholder {
+//                                     color: #514F4F;
+//                                     font-size: 1.2rem;
+//                                     letter-spacing: 0.03em;
+//                                     font-weight: 400;
+//                                 }
+//                             }
+//                         }
+//                         #edit-ab-paco-subscribe-submit {
+//                             top: .6rem;
+//                             padding: 1rem 2.3rem;
+//                             right: 1rem;
+//                             background-color: v.$gold;
+//                             color: #5C0511;
+//                             letter-spacing: 0.03em;
+//                             font-size: 1.2rem;
+//                             font-weight: 400;
+//                             font-style: normal;
+//                             margin: 0;
+//                             &:hover {
+//                                 cursor: pointer;
+//                             }
+//                         }
+//                         .form-item-ab-paco-subscribe-terms-conditions-and-privacy-policy,
+//                         .form-item-ab-paco-subscribe-agree-to-subscribe-and-receive-emails {
+//                             padding-left: 3rem;
+//                             label {
+//                                 position: initial;
+//                                 margin-left: 0;
+//                                 color: v.$white !important;
+//                                 font-size: 1.2rem;
+//                                 line-height: 1.4rem;
+//                                 font-weight: 400;
+//                                 letter-spacing: 0.03em;
+//                                 p {
+//                                     padding-top: .5rem;
+//                                 }
+//                                 a {
+//                                     color: v.$gold;
+//                                     font-size: 1.2rem;
+//                                 }
+//                                 &::before {
+//                                     content: '';
+//                                     display: block;
+//                                     width: 2.5rem;
+//                                     height: 2.5rem;
+//                                     border: .2rem solid v.$white;
+//                                     border-radius: 5rem;
+//                                     background-image: none;
+//                                     left: 0;
+//                                     // top: .5rem;
+//                                     // pointer-events: none;
+//                                     pointer-events: all;
+//                                 }
+//                             }
+//                             input {
+//                                 &:checked {
+//                                     & ~ label {
+//                                         &::before {    
+//                                             background-image: url('../assets/icons/icon-check-white.svg');
+//                                             background-size: 1rem 1rem;
+//                                             background-position: center center;
+//                                             background-repeat: no-repeat;
+//                                             background-color: v.$gold;
+//                                         }
+//                                         &::after {
+//                                             display: none;
+//                                         }
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                         .form-item-ab-paco-subscribe-terms-conditions-and-privacy-policy {
+//                             margin-bottom: 2rem;
+//                             margin-top: 2rem;
+//                         }
+//                         .form-item-ab-paco-subscribe-agree-to-subscribe-and-receive-emails {
+//                             label {
+//                                 p {
+//                                     padding-top: .7rem;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .paco__main--items  {
+//                 @include m.mq(tab, min) {
+//                     padding-top: 1rem;
+//                     padding-left: 5rem;
+//                 }
+//                 .menu {
+//                     margin-left: 0;
+//                     .menu-item {
+//                         padding-top: 0;
+//                         a {
+//                             color: v.$white;
+//                             text-decoration: none;
+//                             display: block;
+//                             font-size: 1.6rem;
+//                             letter-spacing: 0.03em;
+//                             font-weight: 400;
+//                             @include m.mq(tab, min) {
+//                                 font-size: 1.8rem;
+//                                 display: initial;
+//                             }
+//                         }
+//                         .footer__paco--submenu {
+//                             .menu {
+//                                 .menu-item {
+//                                     a {
+//                                         color: v.$white;
+//                                         display: block;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .paco__main--social {
+//                 width: 103%;
+//                 // padding: 2rem 0;
+//                 margin: 2.4rem 0;
+//                 @include m.mq(tab, min) {
+//                     margin: 0;
+//                     border-top: .15rem solid v.$white;
+//                     padding: 3.4rem 0;
+//                 }
+//                 .paco__main--title-social {
+//                     background: linear-gradient(180.77deg, #FFE1AE 0.5%, #BF9246 89.67%, #FFE1AE 99.46%);
+//                     -webkit-background-clip: text;
+//                     -webkit-text-fill-color: transparent;
+//                     background-clip: text;
+//                     text-fill-color: transparent;
+//                     @include m.mq(tab, min) {
+//                         display: none;
+//                     }
+//                 }
+//                 ul.menu {
+//                     height: 100%;
+//                     margin-right: 3rem;
+//                     margin-left: 0;
+//                     @include m.mq(tab, min) {
+//                         justify-content: center;
+//                     }
+//                     li {
+//                         @include m.mq(tab, min) {
+//                             min-height: 2rem;
+//                         }
+//                         a {
+//                             width: auto !important;
+//                             height: 1rem !important;
+//                             margin: 0 20px 0 0 !important;
+//                             img {
+//                                 object-fit: contain;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .paco__main--terms {
+//                 @include m.mq(tab, min) {
+//                     border-top: .15rem solid v.$white;
+//                 }
+//                 .menu {
+//                     margin-left: 0;
+//                     @include m.mq(tab,min) {
+//                         justify-content: center;
+//                     }
+//                     .menu-item {
+//                         padding-top: 0;
+//                         a {
+//                             font-size: 1.2rem;
+//                             font-weight: 400;
+//                             letter-spacing: 0.03em;
+//                             color: v.$white;
+//                             display: block;
+//                             @include m.mq(tab, min) {
+//                                 display: initial;
+//                             }
+//                             @include m.mq(lapS3, min) {
+//                                 font-size: 1.6rem;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//             }
+//         }
+//         .menu__paco--disclaimer-down {
+//             color: v.$white;
+//             // font-family: v.$Roboto;
+//             @include m.mq(lapS, min) {
+//                 padding: 1.5rem 1rem;
+//             }
+//             .menu__disclaimer-down--wrapper {
+//                 // justify-content: space-between;
+//                 @include m.mq(tab, min) {
+//                     // width: 90%;
+//                     // max-width: 140rem;
+//                     display: grid;
+//                     grid-template-columns: 15% 85%;
+//                     width: 100%;
+//                     max-width: none;
+//                     padding: 0 5%;
+//                 }
+//                 @include m.mq(lapS, min) {
+//                     grid-template-columns: 20% 80%;
+//                 }
+//                 @include m.mq(desk, min) {
+//                     grid-template-columns: 25% 75%;
+//                 }
+//                 @include m.mq(deskB, min) {
+//                     grid-template-columns: 30% 70%;
+//                 }
+//                 .menu__disclaimer--content {
+//                     padding: 0;
+//                     .paco__footer--desktop {
+//                         gap: 5rem;
+//                         justify-content: space-between;
+//                         flex-wrap: nowrap;
+//                         .text-container {
+//                             // font-size: 1rem;
+//                             // font-weight: 400;
+//                             // line-height: 1.2rem;
+//                             // width: 27.5rem;
+//                             width: 70rem;
+//                             display: flex;
+//                             justify-content: center;
+//                             align-items: center;
+//                             p {
+//                                 font-size: 0;
+//                                 line-height: 1;
+//                             }
+//                         }
+//                         .image-container {
+//                             &:nth-child(1) {
+//                                 display: none;
+//                             }
+//                             width: 20rem;
+//                         }
+//                     }
+//                     .menu__disclaimer--mobile-view {
+//                         .second-block {
+//                             display: flex;
+//                             flex-direction: column;
+//                             align-items: center;
+//                             justify-content: center;
+//                             gap: 2rem;
+//                             .menu__disclaimer--image {
+//                                 width: 100%;
+//                                 max-width: 17.5rem;
+//                             }
+//                             .menu__disclaimer--text {
+//                                 width: 100%;
+//                                 max-width: 27rem;
+//                             }
+//                             .menu__disclaimer--image {
+//                                 width: 100%;
+//                                 max-width: 20rem;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

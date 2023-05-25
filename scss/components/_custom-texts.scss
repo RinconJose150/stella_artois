@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as v;
+@use '../base/functions' as f;
+// Helpers
+
+.textC {
+    text-align: center;
+}
+
+.underline{
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: .2rem;
+        background-color:  f.color(complementary, underline);
+        position: absolute;
+        top: calc(100% + 1.25rem);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,85 @@
+@use '../../../abstracts/variables' as v;
+@use '../../../abstracts/mixins' as m;
+@use '../../../base/functions' as f;
+@use '../../../abstracts/placeholders.scss';
+
+.#{v.$brand} {
+    &_inviteYourFriends {
+        margin: 5.5rem 0 2.5rem;
+        &__body {
+            .titleSection {
+                padding: 2.5rem 0;
+                text-align: center;
+                background-color: f.color(primary,red);
+                border-radius: 1.6rem 1.6rem 0 0;
+                color: f.color(grayscale, white);
+                font-size: f.toRem(28);
+                font-weight: 400;
+                font-family: v.$artois_sebas, v.$apercuPro, sans-serif;
+            }
+        }
+        .containerCardInfo {
+            padding: 1.5rem 0;
+            &__body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                width: 80%;
+            }
+            .card {
+                border: .1rem solid f.color(grayscale, black);
+                border-radius: .4rem;
+                padding: 1.2rem 1.7rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1.4rem;
+                &__img {
+                    display: contents;
+                    img {
+                        display: block;
+                        width: 5.8rem;
+                        height: 5.8rem;
+
+                    }
+                }
+                &__description {
+                    .titlleCard {
+                        font-size: f.toRem(14);
+                        font-family: v.$apercuPro;
+                        font-weight: 700;
+                        margin-bottom: .3rem;
+                        letter-spacing: 0.02em;
+                    }
+                    .textCard {
+                        font-size: f.toRem(14);
+                        font-family: v.$apercuPro;
+                        font-weight: 400;
+                        letter-spacing: 0.03em;
+                        color: rgba(f.color(grayscale,black), .4);
+                    }
+                    a {
+                        color: f.color(grayscale,black);
+                        text-decoration: underline;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .question {
+            text-align: center;
+            font-size: f.toRem(16);
+            font-family: v.$apercuPro;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            color: f.color(grayscale,black);
+            a {
+                color: inherit;
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use "sass:math";
+@use '../abstracts/variables' as v;
+
+// Funcion que define los colores del sistema basado en el mapa de colores establecido en las variables
+// ==========================================================================
+// COLORS : Eje.: background: color( primary, light );
+// ==========================================================================
+@function color($color, $tone){
+   @if map-has-key(v.$colors, $color){
+       $color: map-get(v.$colors, $color);
+       @if map-has-key($color, $tone){
+           $tone: map-get($color, $tone);
+           @return $tone;
+       }
+   }
+}
+
+// ==========================================================================
+// Funcion que define los tamaños del sistema basado fuentes establecido en las variables
+// ==========================================================================
+@function toRem($size){
+   @return math.div($size, v.$referFont) + rem,
+}
