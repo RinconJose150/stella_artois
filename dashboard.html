@@ -9,12 +9,28 @@
   <title>Dashboard</title>
 </head>
 
-<body>
+<body data-state="friendless">
+  <div class="SA-popup">
+    <div class="SA-popup-container">
+      <p class="SA-popup-title">Friends Delivery</p>
+
+      <p class="SA-popup-text">
+        ¿Estás seguro que deseas canjear <br> el cupón <span> de 20% de descuento</span> <br>
+        de TaDa Delivery de Bebidas?
+      </p>
+
+      <div class="SA-popup-btnBox">
+        <div class="btnSA-red-block">Quiero mi cupón</div>
+        <div class="btnSA-red-block-border">En otro momento</div>
+      </div>
+    </div>
+  </div>
+
   <nav class="SA_nav">
     <p>stella</p>
   </nav>
 
-  <section class="SA_friendCard-container">
+  <section class="SA_dashboard-friendCard">
     <div class="SA_friendCard">
       <div class="SA_friendCard--left">
         <p class="SA_friendCard-cardName">Friends Card</p>
@@ -29,9 +45,11 @@
       </div>
 
       <div class="SA_friendCard--right">
-        <img class="SA_friendCard-stellaIcon" loading="lazy" src="./assets/icons/icon-logo-stella.svg" alt="Cerveza Stella" height="16px" width="78px">
-        
-        <img class="SA_friendCard-tadaIcon" loading="lazy" src="./assets/icons/tada-logo-card.svg" alt="tada" height="30px" width="78px">
+        <img class="SA_friendCard-stellaIcon" loading="lazy" src="./assets/icons/icon-logo-stella.svg"
+          alt="Cerveza Stella" height="16px" width="78px">
+
+        <img class="SA_friendCard-tadaIcon" loading="lazy" src="./assets/icons/tada-logo-card.svg" alt="tada"
+          height="30px" width="78px">
 
         <div class="SA_friendCard-whatsapp">
           <img loading="lazy" src="./assets/icons/icon-whatsapp-green.svg" alt="Whatsapp" height="36px" width="36px">
@@ -40,6 +58,66 @@
       </div>
     </div>
   </section>
+
+  <section class="SA_dashboard-friendList">
+    <div class="SA-alert SA-alert--red">
+      <div class="SA-alert-icon"></div>
+      <p class="SA-alert-text">Enviamos mensajes <span> SMS </span> <br>
+        a tus friends porfa pídeles que abran el link para continuar</p>
+    </div>
+
+    <div class="SA_dashboard-friendList--container">
+      <!-- LISTA DE AMIGOS -->
+      <div class="SA_dashboard-friendList--list">
+
+        <div class="card card--wait" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+          <div class="card__description">
+            <h3 class="titlleCard">Nombre usuario 1</h3>
+            <p class="textCard">Te envio 10% de descuento
+              con su registro en TaDa</p>
+          </div>
+
+          <div class="card__img card__img--small">
+            <img src="./assets/icons/icon-circle-check.svg" alt="icon card" title="icon card">
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+          <div class="card__description">
+            <h3 class="titlleCard">Nombre usuario 2</h3>
+            <p class="textCard">esperando respuesta...</p>
+          </div>
+
+          <div class="card__img card__img--small">
+            <img src="./assets/icons/icon-clock.svg" alt="icon card" title="icon card">
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+          <div class="card__description">
+            <h3 class="titlleCard">Nombre usuario 2</h3>
+            <p class="textCard">esperando respuesta...</p>
+          </div>
+
+          <div class="card__img card__img--small">
+            <img src="./assets/icons/icon-clock.svg" alt="icon card" title="icon card">
+          </div>
+        </div>
+      </div>
+
+      <div class="SA-newFriend">
+        <div class="SA-newFriend-icon">
+          <span>+</span>
+        </div>
+        <p class="SA-newFriend-text">agregar nuevo Friend</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="SA_dashboard-btnBox">
+    <div class="btnSA-red-block">Canjear descuento</div>
+  </div>
+
 </body>
 
 </html>

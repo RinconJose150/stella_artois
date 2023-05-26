@@ -1,0 +1,62 @@
+@use '../base/functions' as f;
+@use '../abstracts/variables' as v;
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.4rem;
+  min-width: 300px;
+  max-width: 300px;
+  width: 100%;
+  padding: 1.2rem 1.7rem;
+  border: .1rem solid f.color(grayscale, black);
+  border-radius: .4rem;
+
+  &--wait {
+    & .card__description { 
+      & .textCard {
+        color: f.color(primary, green);
+      }
+      
+    }
+  }
+
+  &__img {
+      display: contents;
+      img {
+          display: block;
+          width: 5.8rem;
+          height: 5.8rem;
+      }
+  }
+
+  &__img--small {
+    & img {
+      height: 4rem;
+      width: 3.2rem;
+    }
+  }
+
+  &__description {
+      .titlleCard {
+          font-size: f.toRem(14);
+          font-family: v.$apercuPro;
+          font-weight: 700;
+          margin-bottom: .3rem;
+          letter-spacing: 0.02em;
+      }
+      .textCard {
+          font-size: f.toRem(14);
+          font-family: v.$apercuPro;
+          font-weight: 400;
+          letter-spacing: 0.03em;
+          color: rgba(f.color(grayscale,black), .4);
+      }
+      a {
+          color: f.color(grayscale,black);
+          text-decoration: underline;
+          font-weight: 700;
+      }
+  }
+}

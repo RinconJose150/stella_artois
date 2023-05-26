@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as v;
+@use '../base/functions' as f;
+
+.#{v.$brand}-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 14px;
+  width: 300px;
+  padding: 8px 16px;
+  background-color: f.color(bg, alert);
+  border-radius: 80px;
+
+  &--red {
+    background-color: f.color(bg, pink);
+  }
+
+  &-icon {
+    flex: 20%;
+    height: 50px;
+    width: 50px;
+    background-image: url("../assets/icons/icon-bell-alert.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &-text {
+    flex: 90%;
+    color: f.color(grayscale, black);
+    font-family: v.$apercuPro;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+
+    & span {
+      color: f.color(primary, red);
+    }
+  }
+}

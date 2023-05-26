@@ -1,0 +1,102 @@
+@use '../abstracts/variables' as v;
+@use '../base/functions' as f;
+
+.#{v.$brand}-popup { 
+  position: fixed;
+  top: 50%;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(black, 0.24);
+  backdrop-filter: blur(8px);
+  transition: all 0.8s ease;
+  transform: translateY(-50%);
+  z-index: 40;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 298px;
+    height: 298px;
+    padding: 30px 24px;
+    text-align: center;
+    position: relative;
+    background-color: f.color(grayscale, white);
+  }
+
+  &-title {
+    margin-bottom: 14px;
+    color: f.color(primary, red);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &-text {
+    color: f.color(grayscale, black);
+    font-family: v.$apercuPro;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+    & span {
+      color: f.color(primary, red);
+    }
+  }
+
+  &-btnBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 100%;
+    margin-top: 24px;
+
+    & .btnSA-red-block,
+    & .btnSA-red-block-border {
+      font-size: 16px;
+    }
+  }
+
+  &-close {
+    color: f.color(grayscale, white);
+    background-color: rgba(f.color(grayscale, black), 0.4);
+    right: 0;
+    top: -36px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: "";
+      width: 2px;
+      height: 10px;
+      position: absolute;
+      background: f.color(grayscale, white);
+      transform: rotate(45deg);
+      left: auto;
+      top: auto;
+      border-radius: 3px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &.is-close {
+    transform: translateY(-200%);
+  }
+}

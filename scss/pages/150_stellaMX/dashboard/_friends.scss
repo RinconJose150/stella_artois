@@ -1,0 +1,117 @@
+@use '../../../abstracts/variables' as v;
+@use '../../../base/functions' as f;
+@use '../../../components/friendCard';
+@use '../../../components/alert';
+@use '../../../components/popup';
+
+.#{v.$brand}_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  border-bottom: 1px solid black;
+
+  p {
+    font-family: v.$apercuPro;
+    font-size: f.toRem(18);
+    text-transform: uppercase;
+  }
+}
+
+.#{v.$brand}_dashboard-friendCard,
+.#{v.$brand}_dashboard-friendList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 22px;
+  padding-inline: 26px;
+}
+
+.#{v.$brand}_dashboard-friendList {
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 30vh;
+  height: fit-content;
+  max-height: 55vh;
+  margin-top: 4px;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &--list {
+    display: flex;
+    flex-direction: column;
+    margin-block: 22px;
+    row-gap: 16px;
+  }
+
+  &--container {
+    // height: 14em;
+    padding-bottom: 80px;
+  }
+}
+
+.#{v.$brand}-newFriend {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  column-gap: 10px;
+  width: 300px;
+  // margin-bottom: 20px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    width: 26px;
+    border: 1px solid f.color(grayscale, black);
+    border-radius: 4px;
+
+    & span {
+      font-family: v.$apercuPro;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 16px;
+      color: f.color(grayscale, black);
+    }
+  }
+
+  &-text {
+    font-family: v.$apercuPro;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: f.color(grayscale, black);
+  }
+
+  &--new {
+    .#{v.$brand}-newFriend-icon {
+      border-color: f.color(primary, green);
+
+      & span {
+        color: f.color(primary, green);
+      }
+    }
+
+    .#{v.$brand}-newFriend-text {
+      color: f.color(primary, green);
+    }
+  }
+}
+
+.#{v.$brand}_dashboard-btnBox {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  margin: 0 auto;
+
+  .btnSA-red-block {
+    margin: 0 auto;
+  }
+}
