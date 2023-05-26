@@ -8,14 +8,26 @@
         margin: 5.5rem 0 2.5rem;
         &__body {
             .titleSection {
-                padding: 2.5rem 0;
                 text-align: center;
-                background-color: f.color(primary,red);
                 border-radius: 1.6rem 1.6rem 0 0;
-                color: f.color(grayscale, white);
-                font-size: f.toRem(28);
-                font-weight: 400;
-                font-family: v.$artois_sebas, v.$apercuPro, sans-serif;
+                font-family: v.$didot, sans-serif;
+                font-weight: 700;
+                color: f.color(grayscale, black);
+                font-size: f.toRem(32);
+                line-height: 3.4rem;
+                &.red {
+                    padding: 1.75rem 0;
+                    font-weight: 400;
+                    font-family: v.$artois_sebas, v.$apercuPro, sans-serif;
+                    background-color: f.color(primary,red);
+                    color: f.color(grayscale, white);
+                    font-size: f.toRem(28);
+                    line-height: 3.9rem;
+                    text-transform: uppercase;
+                }
+            }
+            .question {
+                margin: 1.5rem 0;
             }
         }
         .containerCardInfo {

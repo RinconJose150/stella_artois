@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard-Code</title>
+    <link rel="stylesheet" href="./lib/normalize/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./lib/aos/aos.css">
+</head>
+<body>
+    <section class="SA_congrats observerSection" id="SA_congrats">
+        <div class="SA_congrats__img">
+            <picture>
+                <source srcset="./assets/img/img_brazos.webp" type="image/webp">
+                <source srcset="./assets/img/img_brazos.png" type="image/png">
+                <img src="./assets/img/img_brazos.png" alt="imagen congrats">
+            </picture>
+        </div>
+        <div class="SA_congrats__body containerLimit">
+            <h1 class="titleSection underline" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">¡Genial! <span class="nameUser">Santiago</span></h1>
+            <p class="textSection"><span data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000">Ya está listo tu cupón con</span><span class="big" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">20% descuento</span><span data-aos="fade-up" data-aos-delay="650" data-aos-duration="1000">para usar en TaDa Delivery</span></p>
+            <div class="containerCopyCode">
+                <div class="containerCopyCode__body">
+                    <label for="idCode" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">Código de descuento</label>
+                    <div class="containerCopyCode__input" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">
+                        <input value="STELLAMX" type="text" id="idCode" readonly>
+                        <a href="#" id="codeRegistration">
+                            <img src="./assets/icons/icon-copy.svg" alt="icon copy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="SA_congrats__containerBtnSA">
+            <a href="#" class="btnSA-red-block" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="1000"><span>Usar Cupón en la app</span></a>
+            <a href="#" class="btnSA-red-block-border" data-aos="fade-up" data-aos-delay="1700" data-aos-duration="1000"><span>Usar Cupón en la web</span></a>
+        </div>
+    </section>
+    <section class="SA_inviteYourFriends">
+        <section class="SA_inviteYourFriends__body">
+            <h2 class="titleSection" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">¿Cómo utilizo </br>este descuento?</h2>
+            <p class="question" data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000">Aquí te lo explicamos</p>
+            <div class="containerCardInfo">
+                <div class="containerCardInfo__body containerLimit">
+                    <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                        <div class="card__img">
+                            <img src="./assets/icons/icon-userCard.svg" alt="icon card" title="icon card">
+                        </div>
+                        <div class="card__description">
+                            <h3 class="titlleCard">ENTRA A TADA DELIVERY Y BUSCA TUS CHELAS</h3>
+                            <p class="textCard">Selecciona tu producto favorito y agrega al carrito para continuar</p>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                        <div class="card__img">
+                            <img src="./assets/icons/icon-userCard.svg" alt="icon card" title="icon card">
+                        </div>
+                        <div class="card__description">
+                            <h3 class="titlleCard">ABRE CARRITO Y PROCEDE AL PAGO</h3>
+                            <p class="textCard">Para realizar el pago debes registrarte en TaDa o iniciar sesión</p>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">
+                        <div class="card__img">
+                            <img src="./assets/icons/icon-userCard.svg" alt="icon card" title="icon card">
+                        </div>
+                        <div class="card__description">
+                            <h3 class="titlleCard">Ingresa el código de descuento</h3>
+                            <p class="textCard">Cuando estés en el checkout busca la opción de descuentos e ingresa el código y dale en aplicar</p>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="1000">
+                        <div class="card__img">
+                            <img src="./assets/icons/icon-userCard.svg" alt="icon card" title="icon card">
+                        </div>
+                        <div class="card__description">
+                            <h3 class="titlleCard">Completa el pago y recibe tus chelas</h3>
+                            <p class="textCard">Te enviamos tus chelas frías en menos de 35 minutos a la puerta de tu casa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="SA_faq">
+        <section class="SA_faq__body containerLimit">
+            <h2 class="titleSection" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">¿Tienes dudas?</h2>
+            <p class="textSection" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">Aquí te las resolvemos</p>
+            <div class="blockOptions">
+                <div class="blockOptions__body" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">
+                    <a class="blockOptions__btn active" href="#"><span>Friends Delivery</span></a>
+                    <a class="blockOptions__btn" href="#"><span>Cupones</span></a>
+                    <a class="blockOptions__btn" href="#"><span>Comunidad Friendly</span></a>
+                </div>
+            </div>
+            <div class="frequentQuestions">
+                <div class="frequentQuestions__body container">
+                    <div class="toggle" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                        <div class="toggle__show">
+                            <h3 class="toggle__show__title">FQA | Article <span>Subtitle</span></h3>
+                            <span class="btnCruz"></span>
+                        </div>
+                        <div class="toggle__hidden" onclick="linkMenuDataLayer(event)">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem odio voluptas ratione a placeat impedit illo distinctio nulla, asperiores magni, et tenetur illum, quis provident officiis quae molestias. Vitae, dolorum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="toggle" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">
+                        <div class="toggle__show">
+                            <h3 class="toggle__show__title">FQA | Article <span>Subtitle</span></h3>
+                            <span class="btnCruz"></span>
+                        </div>
+                        <div class="toggle__hidden" onclick="linkMenuDataLayer(event)">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem odio voluptas ratione a placeat impedit illo distinctio nulla, asperiores magni, et tenetur illum, quis provident officiis quae molestias. Vitae, dolorum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="toggle" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="1000">
+                        <div class="toggle__show">
+                            <h3 class="toggle__show__title">FQA | Article <span>Subtitle</span></h3>
+                            <span class="btnCruz"></span>
+                        </div>
+                        <div class="toggle__hidden" onclick="linkMenuDataLayer(event)">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem odio voluptas ratione a placeat impedit illo distinctio nulla, asperiores magni, et tenetur illum, quis provident officiis quae molestias. Vitae, dolorum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <a href="#SA_congrats" class="SA_up" id="btnClickTop">
+        <div class="SA_up__body"></div>
+    </a>
+    <script src="./lib/aos/aos.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/150_stellaMX/dashboard-code.js"></script>
+</body>
+</html>
