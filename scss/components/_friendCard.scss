@@ -1,0 +1,113 @@
+@use '../abstracts/variables' as v;
+@use '../base/functions' as f;
+
+.#{v.$brand}_friendCard {
+    position: relative;
+    display: flex;
+    height: 180px;
+    width: 300px;
+    padding: 21px 14px 16px 28px;
+    color: f.color(grayscale, white);
+    background-image: url("../assets/bg/bg-card.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+
+
+  &--left {
+    flex: 60%;
+  }
+
+  &--right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex: 40%;
+
+    & .SA_friendCard-stellaIcon {
+      height: 18px;
+      width: 90%;
+      object-fit: cover;
+    }
+
+    & .SA_friendCard-tadaIcon {
+      height: 30px;
+      width: auto;
+      margin-right: 12px;
+      object-fit: contain;
+    }
+
+    & .SA_friendCard-whatsapp {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      align-items: center;
+      margin-right: 12px;
+
+      & img {
+        height: 38px;
+        width: 40px;
+        object-fit: contain;
+      }
+
+      & p {
+        font-family: v.$apercuPro;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-cardName {
+    margin-bottom: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: f.toRem(22);
+    font-weight: 400;
+    color: inherit;
+  }
+
+  &-userName {
+    margin-bottom: 8px;
+    font-family: v.$apercuPro;
+    font-size: f.toRem(16);
+    line-height: 20px;
+    font-weight: 700;
+    color: inherit;
+  }
+
+  &-cardNumber {
+    font-family: v.$apercuPro;
+    font-size: f.toRem(12);
+    line-height: 14px;
+    font-weight: 400;
+    color: inherit;
+    letter-spacing: 3px;
+    opacity: 0.8;
+  }
+
+  &-discount {
+    position: absolute;
+    bottom: 14px;
+    left: 28px;
+
+    & p:first-child {
+      font-family: v.$apercuPro;
+      font-size: f.toRem(12);
+      line-height: 14px;
+      font-weight: 500;
+      color: inherit;
+    }
+
+    & p:last-child {
+      font-family: v.$apercuPro;
+      font-size: f.toRem(18);
+      line-height: 22px;
+      font-weight: 500;
+      color: inherit;
+    }
+  }
+  }

@@ -1,0 +1,22 @@
+@use '../../../abstracts/variables' as v;
+@use '../../../base/functions' as f;
+
+.#{v.$brand}_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  border-bottom: 1px solid black;
+
+  p {
+    font-family: v.$apercuPro;
+    font-size: f.toRem(18);
+    text-transform: uppercase;
+  }
+}
+
+.#{v.$brand}_friendCard-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+}
