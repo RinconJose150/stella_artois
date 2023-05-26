@@ -24,24 +24,13 @@
 // }
 
 // // Botón Rojo
-// .btnSA-red {
-//     @include m.btnSA('rojo', small);
-// }
-// .btnSA-red-block {
-//     width: 100%;
-//     @include m.btnSA('rojo', 'full');
-//     &-tada {
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         gap: .5rem;
-//         span {
-//             line-height: 1;
-//             position: relative;
-//             top: .1rem;
-//         }
-//     }
-// }
+.btnSA-red {
+    @include m.btnSA('rojo', small);
+}
+.btnSA-red-block {
+    width: 100%;
+    @include m.btnSA('rojo', 'full');
+}
 
 // Botón White
 .btnSA-white {
@@ -57,6 +46,9 @@
     border: .2rem solid f.color(grayscale,white);
     backdrop-filter: blur(5px);
     padding: 1.3rem 0;
+    &-artois {
+        @include m.btnSA('black', 'full', 'artois');
+    }
 }
 
 // ==========================================================================
@@ -66,6 +58,7 @@
     background-color: f.color(grayscale,white);
     padding: 1rem;
     width: 100%;
+    z-index: 5;
     p {
         display: flex;
         justify-content: center;
@@ -81,6 +74,44 @@
             object-fit: contain;
         }
     }
+}
+
+// ==========================================================================
+// Up btn
+// ==========================================================================
+.SA_up {
+    width: 6rem;
+    height: 6rem;
+    border: .3rem solid f.color(primary,red);
+    border-radius: 5rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 2rem;
+    z-index: 5;
+    &__body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-image: url('../../assets/icons/icon-arrow-top-red.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            animation: moveArrow 2s linear infinite;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
 }
 
 // // Botón Conoce más con flecha

@@ -1,5 +1,5 @@
-@use '../abstracts/variables' as v;
 @use '../base/functions' as f;
+@use '../abstracts/variables' as v;
 // Helpers
 
 .textC {
@@ -18,5 +18,19 @@
         top: calc(100% + 1.25rem);
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+.question {
+    text-align: center;
+    font-size: f.toRem(16);
+    font-family: v.$apercuPro;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: f.color(grayscale,black);
+    a {
+        color: inherit;
+        text-decoration: underline;
+        font-weight: 700;
     }
 }

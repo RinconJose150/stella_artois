@@ -27,11 +27,8 @@
 // ==========================================================================
 // BUTTONS
 // ==========================================================================
-@mixin btnSA($bgColor, $display) {
-    // padding: 1rem 3rem;
-	font-size: f.toRem(24);
-	font-family: v.$apercuPro;
-	font-weight: 400;
+@mixin btnSA($bgColor, $display, $font:apercu) {
+	line-height: initial;
 	letter-spacing: 0.04em;
     color: f.color(grayscale, white);
     text-decoration: none;
@@ -39,25 +36,46 @@
     border: none;
 	border-radius: .4rem;
 	text-transform: uppercase;
+
+	// Dislay
 	@if $display == full {
 		display: block;
 		width: 100%;
 		max-width: 31.2rem;
-		padding: 1.3rem 0;
+		padding: 1.35rem 0;
 	}
 	@if $display == small {
 		display: inline-block;
-		padding: 1.3rem 3rem;
+		padding: 1.35rem 3rem;
 	}
+
+	// Color
     @if $bgColor == dorado {
         background: linear-gradient(224.45deg, #FFDA9C 1.98%, #B89150 50.22%);
     }
     @if $bgColor == rojo {
-        background: linear-gradient(224.45deg, #BF393F 1.98%, #7F252A 84.24%);
+        background: f.color(primary,red);
     }
     @if $bgColor == blanco {
-        background: linear-gradient(182.6deg, #FFFFFF -17.48%, #C6C6C6 40.78%, #FFFFFF 97.83%);
+        background: f.color(grayscale,white);
     }
+
+	// Font
+	@if $font == apercu {
+		font-size: f.toRem(22);
+		font-family: v.$apercuPro;
+		font-weight: 700;
+		span {
+			position: relative;
+			top: .1rem;
+		}
+	}
+	@if $font == artois {
+		font-size: f.toRem(24);
+		font-family: v.$artois_sebas;
+		font-weight: 400;
+	}
+
     &:hover {
         opacity: .8;
         cursor: pointer;

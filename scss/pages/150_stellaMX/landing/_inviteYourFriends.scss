@@ -68,18 +68,5 @@
                 }
             }
         }
-        .question {
-            text-align: center;
-            font-size: f.toRem(16);
-            font-family: v.$apercuPro;
-            font-weight: 400;
-            letter-spacing: 0.03em;
-            color: f.color(grayscale,black);
-            a {
-                color: inherit;
-                text-decoration: underline;
-                font-weight: 700;
-            }
-        }
     }
 }

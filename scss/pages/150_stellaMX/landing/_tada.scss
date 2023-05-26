@@ -1,11 +1,11 @@
 @use '../../../abstracts/variables' as v;
 @use '../../../abstracts/mixins' as m;
 @use '../../../base/functions' as f;
-@use '../../../abstracts/placeholders.scss';
 
 .#{v.$brand} {
     &_tada {
-        margin: 7rem 0;
+        padding: 7rem 0 2rem;
+        overflow: hidden;
         &__body {
             border: .1rem solid f.color(grayscale, black);
             border-radius: .4rem;

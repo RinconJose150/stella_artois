@@ -1,0 +1,32 @@
+@use '../../../abstracts/variables' as v;
+@use '../../../abstracts/mixins' as m;
+@use '../../../base/functions' as f;
+
+.#{v.$brand} {
+    &_infoPoducts {
+        &__body {
+            width: 80%;
+        }
+        .imgProducts {
+            width: 100%;
+            max-width: 34rem;
+            margin-bottom: 1.5rem;
+            img {
+                display: block;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .sectionText {
+            font-size: f.toRem(16);
+            font-weight: 400;
+            line-height: 2.8rem;
+            letter-spacing: 0.03em;
+            text-align: center;
+            color: f.color(primary, textDarkGray);
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+}

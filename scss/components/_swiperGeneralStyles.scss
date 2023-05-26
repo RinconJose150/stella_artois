@@ -1,5 +1,5 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/mixins.scss' as m;
+@use '../base/functions' as f;
 
 .swiperGeneralStyles {
     .swiper {
@@ -20,116 +20,18 @@
         object-fit: cover;
     }
 
-
-    // Bullet Banner
-    .swiper-pagination {
-        &.gold {
-            .swiper-pagination-bullet {
-                width: 1.4rem;
-                height: 1.4rem;
-                text-align: center;
-                opacity: 1;
-                // background-color: v.$redBrand;
-                margin: 0 2rem 0 0 !important;
-                // margin: 0 !important;
-                &:last-of-type {
-                    margin: 0 !important;
-                }
+    .swiper-scrollbar {
+        &.swiper-scrollbar-horizontal {
+            background-color: f.color(bg, pink);
+            border-radius: 8rem;
+            max-width: 80%;
+            height: .6rem;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            .swiper-scrollbar-drag {
+                background-color: f.color(primary, red);
             }
-            .swiper-pagination-bullet-active {
-                // background-color: v.$gold;
-            }
-        }
-    }
-
-
-    // Arrows Swiper
-    .containerBtnsSwiper {
-        position: absolute;
-        bottom: 2rem;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: 4.5rem;
-        @include m.mq(tab,min) {
-            gap: 2.5rem;
-        }
-        .swiper-button-next,
-        .swiper-button-prev {
-            position: relative;
-            margin: 0;
-            bottom: auto;
-            top: auto;
-            left: auto;
-            right: auto;
-            // color: v.$redBrand;
-            // font-weight: v.$bold;
-            width: 1.9rem;
-            height: 2.5rem;
-            transform: none;
-            display: inline-block;
-            @include m.mq(tab,min) {
-                width: 1.9rem;
-                height: 2.9rem;
-            }
-            &::before,
-            &::after {
-                content: '';
-                width: .5rem;
-                height: 1.8rem;
-                // background-color: v.$redBrand;
-                border-radius: 5rem;
-                position: absolute;
-                // border: .1rem solid v.$redBrand;
-                left: 50%;
-                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.75);
-                @include m.mq(tab,min) {
-                    width: .5rem;
-                    height: 2rem;
-                }
-            }
-            &::before {
-                top: 0;
-                transform: rotate(45deg) translate(-50%);
-            }
-            &::after {
-                bottom: 0;
-                transform: rotate(-45deg) translate(-50%);
-            }
-        }
-        .swiper-button-next {
-            transform: scaleX(-1);
-        }
-        // Bullet Banner
-        .swiper-pagination {
-            position: relative;
-            width: 45%;
-            max-width: 25rem;
-            bottom: auto;
-            top: auto;
-            left: auto;
-            right: auto;
-            @include m.mq(tab,min) {
-                width: 25%;
-            }
-        }
-        .swiper-pagination-bullet {
-            width: 1.4rem;
-            height: 1.4rem;
-            text-align: center;
-            opacity: 1;
-            // background-color: v.$redBrand;
-            margin: 0 2rem 0 0 !important;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.75);
-            &:last-of-type {
-                margin: 0 !important;
-            }
-        }
-        .swiper-pagination-bullet-active {
-            // background-color: v.$white;
         }
     }
 }

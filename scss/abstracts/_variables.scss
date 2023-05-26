@@ -5,6 +5,7 @@ $font-size: 1rem;
 $referFont: 10;
 $apercuPro: "ApercuPro", sans-serif;
 $artois_sebas: "ApercuPro", sans-serif;
+$didot: "Didot", sans-serif;
 
 // ==========================================================================
 // Paths and Brand
@@ -16,17 +17,18 @@ $brand: 'SA';
 // ==========================================================================
 // COLORS : Eje.: background: color( primary, light );
 // ==========================================================================
-
 $colors: (
    primary: (
       red         : #D50032,
       green       : #10911F,
+      textDarkGray: #263238,
    ),
    bg: (
       pink        : #FBE5EB,
    ),
    complementary: (
       underline   : #A39665,
+      borderFAQ   : #E3E3E3
    ),
    grayscale: (
       white       : #ffffff,

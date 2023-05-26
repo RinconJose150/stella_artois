@@ -1,0 +1,46 @@
+@use '../../../abstracts/variables' as v;
+@use '../../../abstracts/mixins' as m;
+@use '../../../base/functions' as f;
+
+.#{v.$brand} {
+    &_games {
+        margin: 3rem 0;
+        &__body {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .imgGames {
+            border-radius: .4rem;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .titleSection {
+            margin-top: 2.5rem;
+            width: 90%;
+            font-family: v.$didot;
+            font-size: f.toRem(32);
+            line-height: 3.8rem;
+            text-align: center;
+            font-weight: 700;
+            color: f.color(grayscale,black);
+        }
+        .textSection {
+            margin: 1.5rem 0 2.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: f.toRem(16);
+            line-height: 2.8rem;
+            font-family: v.$apercuPro;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            color: f.color(primary,textDarkGray);
+        }
+    }
+}

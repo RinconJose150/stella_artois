@@ -1,0 +1,169 @@
+@use '../../../abstracts/variables' as v;
+@use '../../../abstracts/mixins' as m;
+@use '../../../base/functions' as f;
+
+.#{v.$brand} {
+    &_faq {
+        margin: 5rem 0;
+        &__body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .titleSection {
+            font-family: v.$didot;
+            font-size: f.toRem(32);
+            text-align: center;
+            font-weight: 700;
+            color: f.color(grayscale,black);
+            margin-bottom: 1rem;
+        }
+        .textSection {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            font-family: v.$apercuPro;
+            font-size: f.toRem(16);
+            line-height: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            color: f.color(primary,textDarkGray);
+        }
+        .blockOptions {
+            width: 100%;
+            overflow: hidden;
+            &__body {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__btn {
+                color: f.color(primary,red);
+                font-size: f.toRem(12);
+                font-family: v.$apercuPro;
+                font-weight: 700;
+                letter-spacing: 0.03em;
+                text-align: center;
+                border: .1rem solid f.color(primary, red);
+                border-radius: 5rem;
+                span {
+                    display: block;
+                    padding: .4rem .8rem;
+                    border-radius: 5rem;
+
+                }
+                &.active {
+                    // border: .3rem solid f.color(bg,pink);
+                    border: .3rem solid rgba(f.color(primary,red), .3);
+                    span {
+                        background-color: f.color(primary,red);
+                        color: f.color(grayscale, white);
+
+                    }
+                }
+            }
+        }
+        .frequentQuestions {
+            margin-top: 3rem;
+        }
+        .toggle {
+            overflow: hidden;
+            position: relative;
+            &:first-of-type {
+                padding-top: 1.5rem;
+                border-top: .1rem solid f.color(complementary, borderFAQ);
+            }
+            &.removeOverFlow {
+                overflow: visible;
+            }
+            &__show{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // padding: 2.4rem 1.5rem;
+                padding: .9rem 1.5rem 2.4rem;
+                border-bottom: .1rem solid f.color(complementary, borderFAQ);
+                &__title {
+                    font-size: f.toRem(22);
+                    font-family: v.$apercuPro;
+                    font-weight: 400;
+                    color: f.color(primary, textDarkGray); 
+                    letter-spacing: 0.03em;
+                    display: grid;
+                    transition: all .2s linear;
+                }
+                .btnCruz {
+                    position: relative;
+                    &::before{
+                        content: "";
+                        display: block;
+                        background-color: f.color(primary, red);
+                        width: 2rem;
+                        height: .2rem;
+                        transition: .3s ease transform;
+                        position: absolute;
+                        top: 50%;
+                        right: 1.5rem;
+                        transform: translateY(-50%) rotate(90deg);
+                    }
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 2rem;
+                        height: .2rem;
+                        background-color: f.color(primary, red);
+                        transition: .3s ease transform;
+                        position: absolute;
+                        top: 50%;
+                        right: 1.5rem;
+                        transform: translateY(-50%);
+                    }
+                }
+                &.active{
+                    .btnCruz {
+                        &::before{
+                            display: none;
+                        }
+                        &::after {
+                            background-color: f.color(primary, red);
+                        }
+                    }
+                    .toggle__show__title {
+                        color: f.color(primary, red);
+                        transform: scale(1.05);
+                        transition: all .2s linear;
+                    }
+                }
+                &.disabled {
+                    pointer-events: none;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            &__hidden{
+                padding: 1.5rem 1.5rem 0;
+                height: 0;
+                transition: 1s ease;
+                transition-property: height, opacity;
+                p {
+                    width: 100%;
+                    font-size: f.toRem(16);
+                    color: f.color(grayscale, black); 
+                    font-family: v.$apercuPro;
+                    font-weight: 400;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-decoration: none;
+                    transition: all .2s linear;
+                }
+                &.borderGold {
+                    border-bottom: .1rem solid f.color(complementary, borderFAQ);
+                }
+            }
+        }
+    }
+}

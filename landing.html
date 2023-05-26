@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing</title>
+    <link rel="stylesheet" href="./lib/normalize/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./lib/aos/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
 </head>
 <body>
     <section class="SA_banner">
@@ -18,17 +22,17 @@
             </picture>
         </div>
         <section class="SA_banner__body containerLimit">
-            <div  class="imgVideo" data-codeVideo="YJiz_zgNr58">
+            <div  class="imgVideo" data-codeVideo="YJiz_zgNr58" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 <div class="imgVideo__play"></div>
             </div>
-            <h1 class="underline">Stella Artois</h1>
-            <h2>Friends<span class="big">Delivery</span></h2>
-            <p>
+            <h1 class="underline" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">Stella Artois</h1>
+            <h2><span data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">Friends</span><span class="big" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">Delivery</span></h2>
+            <p data-aos="fade-up" data-aos-delay="1400" data-aos-duration="1000">
                 Apoyando la amistad ofrecemos descuentos por cada amigo que invites a la fiesta y TaDa Delivery lleva las cervezas frías a la puerta de tu casa
             </p>
-            <a href="" class="btnSA-white-block-border">Conoce más</a>
+            <a href="" class="btnSA-white-block-border" data-aos="fade-up" data-aos-delay="1700" data-aos-duration="1000">Conoce más</a>
         </section>
-        <a href="#" class="SAbtnWhatsapp float">
+        <a href="#" class="SAbtnWhatsapp float" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
             <p>
                 Compartir
                 <img src="./assets/icons/icon-whatsapp.svg" alt="icon whatsapp" title="icon whatsapp">
@@ -37,10 +41,10 @@
     </section>
     <section class="SA_inviteYourFriends">
         <section class="SA_inviteYourFriends__body">
-            <h2 class="titleSection">Invita a tus friends ¡Ya!</h2>
+            <h2 class="titleSection" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Invita a tus friends ¡Ya!</h2>
             <div class="containerCardInfo">
                 <div class="containerCardInfo__body containerLimit">
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
                         <div class="card__img">
                             <img src="./assets/icons/icon-userCard.svg" alt="icon card" title="icon card">
                         </div>
@@ -49,7 +53,7 @@
                             <p class="textCard">regístrate como anfitrión para recibir los descuentos de tus Friends</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
                         <div class="card__img">
                             <img src="./assets/icons/icon-userCard.svg" alt="icon card" title="icon card">
                         </div>
@@ -58,7 +62,7 @@
                             <p class="textCard">por cada uno y luego canjéalos por un cupón de descuento en <a href="#">TaDa Delivery</a></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">
                         <div class="card__img">
                             <img src="./assets/icons/icon-userCard.svg" alt="icon card" title="icon card">
                         </div>
@@ -67,7 +71,7 @@
                             <p class="textCard">al finalizar el anfitrión descarga la <a href="#">APP de TaDa Delivery</a> y utiliza el cupón para obtener el descuento</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="1000">
                         <div class="card__img">
                             <img src="./assets/icons/icon-userCard.svg" alt="icon card" title="icon card">
                         </div>
@@ -78,11 +82,11 @@
                     </div>
                 </div>
             </div>
-            <p class="question">¿Tienes dudas? <a href="#">dale aquí</a></p>
+            <p class="question" data-aos="fade-up" data-aos-delay="1700" data-aos-duration="1000">¿Tienes dudas? <a href="#">dale aquí</a></p>
         </section>
     </section>
     <section class="SA_tada">
-        <div class="SA_tada__body containerLimit">
+        <div class="SA_tada__body containerLimit" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">
             <div class="content">
                 <div class="content__img underline">
                     <picture>
@@ -104,18 +108,159 @@
             </div>
         </div>
     </section>
-    <div class="SA_infoPoducts">
-        <div class="SA_infoPoducts__body">
-            <div class="imgProducts">
-                <div class="imgProducts__img">
-                    <picture>
-                        <source srcset="./assets/bg/bg_products.webp" type="image/webp">
-                        <source srcset="./assets/bg/bg_products.png" type="image/png">
-                        <img src="./assets/bg/bg_products.png" alt="imagen de producto" title="imagen de producto">
-                    </picture>
+    <section class="SA_infoPoducts">
+        <div class="SA_infoPoducts__body containerLimit">
+            <div class="imgProducts" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">
+                <picture>
+                    <source srcset="./assets/bg/bg_products.webp" type="image/webp">
+                    <source srcset="./assets/bg/bg_products.png" type="image/png">
+                    <img src="./assets/bg/bg_products.png" alt="imagen de producto" title="imagen de producto">
+                </picture>
+            </div>
+            <p class="sectionText" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                Sube una foto a tu cuenta de instagram utilizando el <span>#friendsdelivery</span> la foto con más likes gana un premio exclusivo
+            </p>
+        </div>
+    </section>
+    <section class="SA_uploadPhoto">
+        <div class="SA_uploadPhoto__body">
+            <div class="swiper uploadPhotoSwiper swiperGeneralStyles">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                        <picture>
+                            <source srcset="./assets/img/img1.webp" type="image/webp">
+                            <source srcset="./assets/img/img1.jpg" type="image/jpeg">
+                            <img src="./assets/img/img1.jpg" alt="imagen" title="imagen">
+                        </picture>
+                        <div class="likesPhoto">
+                            <div class="likesPhoto__heart">
+                                <img src="./assets/icons/icon_heart.svg" alt="icon corazón" title="icon corazón">
+                            </div>
+                            <p class="likesPhoto__text"><span>68</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"  data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+                        <picture>
+                            <source srcset="./assets/img/img2.webp" type="image/webp">
+                            <source srcset="./assets/img/img2.jpg" type="image/jpeg">
+                            <img src="./assets/img/img2.jpg" alt="imagen" title="imagen">
+                        </picture>
+                        <div class="likesPhoto">
+                            <div class="likesPhoto__heart">
+                                <img src="./assets/icons/icon_heart.svg" alt="icon corazón" title="icon corazón">
+                            </div>
+                            <p class="likesPhoto__text"><span>68</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"  data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">
+                        <picture>
+                            <source srcset="./assets/img/img1.webp" type="image/webp">
+                            <source srcset="./assets/img/img1.jpg" type="image/jpeg">
+                            <img src="./assets/img/img1.jpg" alt="imagen" title="imagen">
+                        </picture>
+                        <div class="likesPhoto">
+                            <div class="likesPhoto__heart">
+                                <img src="./assets/icons/icon_heart.svg" alt="icon corazón" title="icon corazón">
+                            </div>
+                            <p class="likesPhoto__text"><span>68</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"  data-aos="fade-left" data-aos-delay="1100" data-aos-duration="1000">
+                        <picture>
+                            <source srcset="./assets/img/img2.webp" type="image/webp">
+                            <source srcset="./assets/img/img2.jpg" type="image/jpeg">
+                            <img src="./assets/img/img2.jpg" alt="imagen" title="imagen">
+                        </picture>
+                        <div class="likesPhoto">
+                            <div class="likesPhoto__heart">
+                                <img src="./assets/icons/icon_heart.svg" alt="icon corazón" title="icon corazón">
+                            </div>
+                            <p class="likesPhoto__text"><span>68</span></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"></div>
                 </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <div class="containerBtnSA containerLimit">
+                <a href="#" class="btnSA-red-block" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="1000"><span>Sube tu foto</span></a>
             </div>
         </div>
+        <p class="question" data-aos="fade-up" data-aos-delay="1700" data-aos-duration="1000">¿Tienes dudas? <a href="#">dale aquí</a></p>
+    </section>
+    <section class="SA_games">
+        <div class="SA_games__body containerLimit">
+            <div class="imgGames"   data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <picture>
+                    <source srcset="./assets/img/imgJuegos.webp" type="image/webp">
+                    <source srcset="./assets/img/imgJuegos.jpg" type="image/jpeg">
+                    <img src="./assets/img/imgJuegos.jpg" alt="imagen game" title="imagen game">
+                </picture>
+            </div>
+            <h2 class="titleSection" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">Juegos para disfrutar con tus Friends</h2>
+            <p class="textSection" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                Mientras esperas tu domicilio  te invitamos a checar los juegos que preparamos para que la pases genial
+            </p>
+            <a href="#" class="btnSA-red-block" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000"><span>Ver juegos</span></a>
+        </div>
+    </section>
+    <section class="SA_faq">
+        <section class="SA_faq__body containerLimit">
+            <h2 class="titleSection" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">¿Tienes dudas?</h2>
+            <p class="textSection" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">Aquí te las resolvemos</p>
+            <div class="blockOptions">
+                <div class="blockOptions__body" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">
+                    <a class="blockOptions__btn active" href="#"><span>Friends Delivery</span></a>
+                    <a class="blockOptions__btn" href="#"><span>Cupones</span></a>
+                    <a class="blockOptions__btn" href="#"><span>Comunidad Friendly</span></a>
+                </div>
+            </div>
+            <div class="frequentQuestions">
+                <div class="frequentQuestions__body container">
+                    <div class="toggle" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                        <div class="toggle__show">
+                            <h3 class="toggle__show__title">FQA | Article <span>Subtitle</span></h3>
+                            <span class="btnCruz"></span>
+                        </div>
+                        <div class="toggle__hidden" onclick="linkMenuDataLayer(event)">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem odio voluptas ratione a placeat impedit illo distinctio nulla, asperiores magni, et tenetur illum, quis provident officiis quae molestias. Vitae, dolorum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="toggle" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">
+                        <div class="toggle__show">
+                            <h3 class="toggle__show__title">FQA | Article <span>Subtitle</span></h3>
+                            <span class="btnCruz"></span>
+                        </div>
+                        <div class="toggle__hidden" onclick="linkMenuDataLayer(event)">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem odio voluptas ratione a placeat impedit illo distinctio nulla, asperiores magni, et tenetur illum, quis provident officiis quae molestias. Vitae, dolorum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="toggle" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="1000">
+                        <div class="toggle__show">
+                            <h3 class="toggle__show__title">FQA | Article <span>Subtitle</span></h3>
+                            <span class="btnCruz"></span>
+                        </div>
+                        <div class="toggle__hidden" onclick="linkMenuDataLayer(event)">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem odio voluptas ratione a placeat impedit illo distinctio nulla, asperiores magni, et tenetur illum, quis provident officiis quae molestias. Vitae, dolorum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="SA_up">
+        <div class="SA_up__body"></div>
     </div>
+    <script src="./lib/modernizr/modernizr.js"></script>
+    <script src="./lib/swiper/swiper-bundle.min.js"></script>
+    <script src="./lib/aos/aos.js"></script>
+    <script src="./lib/youtube/iframe_api.js"></script>
+    <script src="./js/150_stellaMX/landing.js"></script>
 </body>
 </html>
