@@ -3,9 +3,8 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 function eventListeners(params) {
+    /* ========== Swiper ========== */
     swiperGeneralStyles
-
-    frequestQuestionsFuntions()
 
     // Funcionalidad de lasanimaciones AOS
     AOS.init({
@@ -13,6 +12,8 @@ function eventListeners(params) {
         once: true,
     });
 }
+
+/* ========== Swiper ========== */
 const swiperGeneralStyles = new Swiper(".swiperGeneralStyles", {
     slidesPerView: 1.9,
     spaceBetween: 20,
@@ -21,48 +22,9 @@ const swiperGeneralStyles = new Swiper(".swiperGeneralStyles", {
         hide: false,
     },
 });
+/* ========== End Swiper ========== */
 
-function frequestQuestionsFuntions() {
-    const toggle = document.querySelectorAll('.toggle');
-    // console.log(toggle);
-    if(toggle) {
-        const delegatedTo = '.toggle__show';
-        document.querySelectorAll('.toggle').forEach(e => {
-            e.addEventListener('click', (e) => {
-                let clicked = e.target;
-                if(clicked.closest(delegatedTo)) toggleFAQ(clicked.closest(delegatedTo), 'enable')
-            })
-        })
-    
-        const toggleFAQ = (element, type) => {
-            if(!element) return;
-            const {nextElementSibling: descriptionBlock} = element;
-    
-            switch (type) {
-                case 'enable':
-                    if(element.classList.contains('active')) return toggleFAQ(element, 'disable')
-    
-                    toggleFAQ(document.querySelector(`${delegatedTo}.active`), 'disable')
-    
-                    element.classList.add('active');
-                    if(descriptionBlock) descriptionBlock.style.height = descriptionBlock.scrollHeight + 20 + "px";
-                    setTimeout(() => {
-                        descriptionBlock.classList.add('borderGold')
-                    }, 300);
-                    break;
-                    
-                case 'disable':
-                    element.classList.remove('active');
-                    if(descriptionBlock) descriptionBlock.style.height = '0';
-                    setTimeout(() => {
-                        descriptionBlock.classList.remove('borderGold')
-                    }, 300);
-                    break;
-            }
-        }
-    }
-}
-
+/* ========== Video Youtube ========== */
 function onYouTubeIframeAPIReady() {
     const allVideos = document.querySelectorAll('.imgVideo')
     allVideos.forEach( video => {
@@ -123,3 +85,4 @@ const closePopUPVideo = (body,popupVideo) => {
         })
     })
 }
+/* ========== End Video Youtube ========== */

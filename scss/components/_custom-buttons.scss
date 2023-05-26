@@ -2,27 +2,6 @@
 @use '../abstracts/mixins' as m;
 @use '../base/functions' as f;
 
-// Botón Dorado
-// .btnSA-gold {
-//     @include m.btnSA('dorado', 'small');
-// }
-// .btnSA-gold-block {
-//     @include m.btnSA('dorado', 'full');
-// }
-// .btnSA-gold-block-border {
-//     @include m.btnSA('dorado', 'full');
-//     background: transparent;
-//     border: .2rem solid v.$gold;
-//     padding: 1.1rem 0;
-// }
-// .btnSA-black-block-border {
-//     @include m.btnSA('black', 'full');
-//     background: transparent;
-//     border: .2rem solid v.$black;
-//     padding: 1.1rem 0;
-//     color: v.$black
-// }
-
 // // Botón Rojo
 .btnSA-red {
     @include m.btnSA('rojo', small);
@@ -30,6 +9,17 @@
 .btnSA-red-block {
     width: 100%;
     @include m.btnSA('rojo', 'full');
+}
+.btnSA-red-block-border {
+    @include m.btnSA('black', 'full');
+    background: transparent;
+    border: .3rem solid f.color(primary,red);
+    backdrop-filter: blur(5px);
+    padding: 1.3rem 0;
+    color: f.color(primary,red);
+    &-artois {
+        @include m.btnSA('black', 'full', 'artois');
+    }
 }
 
 // Botón White
@@ -74,6 +64,15 @@
             object-fit: contain;
         }
     }
+    &:hover {
+        background-color: f.color(grayscale,black);
+        p {
+            color: f.color(grayscale,white);
+        }
+        img {
+            filter: invert(100%);
+        }
+    }
 }
 
 // ==========================================================================
@@ -88,10 +87,15 @@
     bottom: 3rem;
     right: 2rem;
     z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s linear;
+    backdrop-filter: blur(7.44898px);
     &__body {
         position: relative;
         width: 100%;
         height: 100%;
+        pointer-events: none;
         &::before {
             content: '';
             display: block;
@@ -111,7 +115,11 @@
             cursor: pointer;
         }
     }
-
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+        transition: opacity .5s linear;
+    }
 }
 
 // // Botón Conoce más con flecha
