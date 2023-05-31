@@ -4,6 +4,29 @@
 @use '../../../components/alert';
 @use '../../../components/popup';
 
+body[data-state='empty-friends-list'] {
+  & .SA_dashboard-friendList--list {
+    display: none;
+  }
+
+  & .SA_dashboard-friendList {
+    overflow: initial;
+  }
+
+  & .SA-newFriend {
+    display: none;
+  }
+
+  & .SA_dashboard-friendList--container {
+    margin-top: 40px;
+    padding-bottom: 0;
+  }
+
+  & .SA_dashboard-btnBox {
+    display: none;
+  }
+}
+
 .#{v.$brand}_nav {
   display: flex;
   align-items: center;
@@ -48,7 +71,6 @@
   }
 
   &--container {
-    // height: 14em;
     padding-bottom: 80px;
   }
 }
@@ -58,8 +80,8 @@
   align-items: center;
   align-self: flex-start;
   column-gap: 10px;
-  width: 300px;
-  // margin-bottom: 20px;
+  // width: 300px;
+  width: fit-content;
   cursor: pointer;
   transition: all .3s ease-in-out;
 
@@ -114,4 +136,21 @@
   .btnSA-red-block {
     margin: 0 auto;
   }
+}
+
+.#{v.$brand}_dashboard-empty-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  width: 100%;
+
+  & .btnSA-red-block {
+    width: 300px;
+  }
+}
+
+.noClick {
+  pointer-events: none !important;
+  user-select: none;
 }

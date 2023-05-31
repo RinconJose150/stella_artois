@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./lib/aos/aos.css">
   <link rel="stylesheet" href="./css/main.css">
   <title>Dashboard</title>
 </head>
 
 <body data-state="friendless">
-  <div class="SA-popup">
+<!-- <body data-state="empty-friends-list"> -->
+  <div class="SA-popup close">
     <div class="SA-popup-container">
+      <div class="SA-popup-closeIcon"></div>
       <p class="SA-popup-title">Friends Delivery</p>
 
       <p class="SA-popup-text">
@@ -26,12 +29,29 @@
     </div>
   </div>
 
-  <nav class="SA_nav">
-    <p>stella</p>
-  </nav>
+  <div class="SA-loader close ">
+    <img class="SA-loader-stellaIcon" loading="lazy" src="./assets/icons/icon-logo-stella.svg"
+    alt="Cerveza Stella" height="16px" width="78px">
+
+    <div class="SA-loader-loadIcon--box">
+      <img class="SA-loader-loadIcon" loading="lazy" src="./assets/img/circle-arrows.svg" alt="icono de carga">
+    </div>
+
+    <p class="SA-loader--text">
+      Estamos procesando <br>
+      tu descuento En tada delivery
+    </p>
+
+    <div class="SA-loader--tadaIcon"></div>
+
+    <p class="SA-loader--subtext">
+      canales de atención y respuesta a peticiones, consultas, quejas y
+      reclamos de titulares de datos personales <a href="#"> aquí </a>
+    </p>
+  </div>
 
   <section class="SA_dashboard-friendCard">
-    <div class="SA_friendCard">
+    <div class="SA_friendCard" data-aos="fade-up" data-aos-duration="1000">
       <div class="SA_friendCard--left">
         <p class="SA_friendCard-cardName">Friends Card</p>
 
@@ -60,7 +80,7 @@
   </section>
 
   <section class="SA_dashboard-friendList">
-    <div class="SA-alert SA-alert--red">
+    <div class="SA-alert SA-alert--red" data-aos="fade-up"  data-aos-duration="1000">
       <div class="SA-alert-icon"></div>
       <p class="SA-alert-text">Enviamos mensajes <span> SMS </span> <br>
         a tus friends porfa pídeles que abran el link para continuar</p>
@@ -68,9 +88,9 @@
 
     <div class="SA_dashboard-friendList--container">
       <!-- LISTA DE AMIGOS -->
-      <div class="SA_dashboard-friendList--list">
+      <div class="SA_dashboard-friendList--list"  data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
 
-        <div class="card card--wait" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+        <div class="card card--discount">
           <div class="card__description">
             <h3 class="titlleCard">Nombre usuario 1</h3>
             <p class="textCard">Te envio 10% de descuento
@@ -82,7 +102,7 @@
           </div>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+        <div class="card">
           <div class="card__description">
             <h3 class="titlleCard">Nombre usuario 2</h3>
             <p class="textCard">esperando respuesta...</p>
@@ -93,7 +113,7 @@
           </div>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+        <div class="card">
           <div class="card__description">
             <h3 class="titlleCard">Nombre usuario 2</h3>
             <p class="textCard">esperando respuesta...</p>
@@ -105,19 +125,29 @@
         </div>
       </div>
 
-      <div class="SA-newFriend">
+      <div class="SA-newFriend" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".SA_dashboard-friendList--list" data-aos-duration="1000">
         <div class="SA-newFriend-icon">
           <span>+</span>
         </div>
         <p class="SA-newFriend-text">agregar nuevo Friend</p>
       </div>
+
+      <div class="SA_dashboard-empty-list" data-aos="fade-up" data-aos-duration="1000">
+        <picture>
+          <img loading="lazy" src="./assets/img/main-op.png" alt="Juntos podemos con todo piensa en grande">
+        </picture>
+
+        <div class="btnSA-red-block">¡invita a tu friends!</div>
+      </div>
     </div>
   </section>
 
-  <div class="SA_dashboard-btnBox">
+  <div class="SA_dashboard-btnBox" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".SA_dashboard-friendList--list" data-aos-duration="1000">
     <div class="btnSA-red-block">Canjear descuento</div>
   </div>
 
+  <script src="./lib/aos/aos.js"></script>
+  <script src="./js/150_stellaMX/dashboard.js"></script>
 </body>
 
 </html>

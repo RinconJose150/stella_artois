@@ -1,0 +1,85 @@
+@use '../../../abstracts/variables' as v;
+@use '../../../base/functions' as f;
+
+.#{v.$brand}-loader {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 48px;
+  background-color: f.color(primary, red);
+  opacity: 1;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: all .3s linear;
+
+  &-stellaIcon {
+    width: 70%;
+  }
+
+  &-loadIcon {
+    object-fit: contain;
+    animation: rotate 2.5s infinite linear;
+
+    &--box {
+      height: fit-content;
+      width: 346px;
+      margin-block: 40px;
+      transform: translateX(16%);
+    }
+  }
+
+  &--text {
+    margin-bottom: 40px;
+    color: f.color(grayscale, white);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &--tadaIcon {
+    height: 56px;
+    width: 126px;
+    margin-bottom: 100px;
+    background-image: url("../assets/icons/tada-logo-card.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--subtext {
+    position: absolute;
+    bottom: 24px;
+    width: 300px;
+    padding-inline: 5px;
+    color: f.color(grayscale, white);
+    font-family: 'Inter';
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+
+    & a {
+      text-transform: uppercase;
+      color: f.color(grayscale, white);
+    }
+  }
+
+  &.close {
+    opacity: 0;
+    pointer-events: all;
+    z-index: -1;
+
+    & .SA-loader--tadaIcon {
+      margin-bottom: 0;
+    }
+  }
+}

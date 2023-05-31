@@ -1,9 +1,10 @@
 @use '../abstracts/variables' as v;
 @use '../base/functions' as f;
 
-.#{v.$brand}-popup { 
+.#{v.$brand}-popup {
   position: fixed;
-  top: 50%;
+  // top: 50%;
+  top: 0;
   left: 0;
   display: flex;
   flex-flow: row wrap;
@@ -13,10 +14,25 @@
   background: rgba(black, 0.24);
   backdrop-filter: blur(8px);
   transition: all 0.8s ease;
-  transform: translateY(-50%);
+  // transform: translateY(-50%);
+  opacity: 1;
+  pointer-events: all;
+  user-select: all;
   z-index: 40;
 
+  &-closeIcon {
+    position: absolute;
+    top: -56px;
+    right: 0px;
+    height: 40px;
+    width: 42px;
+    background-image: url('../assets/icons/icon-x-mark.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   &-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,9 +40,11 @@
     width: 298px;
     height: 298px;
     padding: 30px 24px;
+    margin-top: 84px;
     text-align: center;
     position: relative;
     background-color: f.color(grayscale, white);
+    border-radius: 4px;
   }
 
   &-title {
@@ -63,40 +81,11 @@
     }
   }
 
-  &-close {
-    color: f.color(grayscale, white);
-    background-color: rgba(f.color(grayscale, black), 0.4);
-    right: 0;
-    top: -36px;
-    width: 24px;
-    height: 24px;
-    border: 2px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+  &.close {
     position: absolute;
-    cursor: pointer;
-
-    &::after,
-    &::before {
-      content: "";
-      width: 2px;
-      height: 10px;
-      position: absolute;
-      background: f.color(grayscale, white);
-      transform: rotate(45deg);
-      left: auto;
-      top: auto;
-      border-radius: 3px;
-    }
-
-    &::before {
-      transform: rotate(-45deg);
-    }
-  }
-
-  &.is-close {
-    transform: translateY(-200%);
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
   }
 }

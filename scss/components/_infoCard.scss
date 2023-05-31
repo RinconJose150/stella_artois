@@ -12,8 +12,10 @@
   padding: 1.2rem 1.7rem;
   border: .1rem solid f.color(grayscale, black);
   border-radius: .4rem;
+  pointer-events: none;
 
-  &--wait {
+  &--discount {
+    pointer-events: inherit;
     & .card__description { 
       & .textCard {
         color: f.color(primary, green);
